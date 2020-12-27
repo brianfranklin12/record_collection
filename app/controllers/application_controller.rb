@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
     if !logged_in?
       erb :index
     else
-      redirect '/index'
+      redirect '/albums'
     end
   end
 

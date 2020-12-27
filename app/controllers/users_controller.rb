@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     if !logged_in?
       erb :'users/signup'
     else
-      redirect '/index'
+      redirect '/albums'
     end
   end
 
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if (params[:username] != "") && (params[:password] != "")
       user = User.create(params)
       session[:user_id] = user.id
-      redirect '/index'
+      redirect '/albums'
     else
       redirect '/signup' 
     end
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     if !logged_in?
       erb :'users/login'
     else
-      redirect '/index'
+      redirect '/albums'
     end
   end
 
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
     user = User.find_by(:username => params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect '/index'
+      redirect '/albums'
     else
       redirect '/login'
     end
@@ -39,10 +39,6 @@ class UsersController < ApplicationController
   get '/logout' do 
     session.clear
     redirect '/login'
-  end
-
-  get '/index' do
-    erb :'users/index'
   end
 
 end

@@ -1,0 +1,13 @@
+<h1>Welcome <%=current_user.username%></h1>
+<div class="sidebar">
+<ul>
+  <% current_user.albums.each do |album| %>
+    <li><a href="/albums/<%=album.id%>"><%="#{album.name} - by #{album.artist.name}"%></a></li>
+  <% end %>
+</ul>
+</div>
+
+<br>
+<br>
+
+<button><a href="/albums/new">Add an Album to your Collection</a></button>
