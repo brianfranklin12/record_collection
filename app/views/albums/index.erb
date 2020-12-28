@@ -1,4 +1,4 @@
-<h1>Welcome <%=current_user.username%></h1>
+<h1><%=current_user.username%>'s RecordCo//ection</h1>
 <div class="sidebar">
 <ul>
   <% current_user.albums.each do |album| %>
@@ -10,4 +10,4 @@
 <br>
 <br>
 
-<button><a href="/albums/new">Add an Album to your Collection</a></button>
+<button class="btn-primary" onclick="location.href='/albums/new'">Add an Album to your Collection</button>
