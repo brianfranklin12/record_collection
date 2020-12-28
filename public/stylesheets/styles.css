@@ -3,15 +3,21 @@ body {
   background: #eee;
 }
 
-.nav-list{
-  background:white;
-  box-shadow: 0px 0px 10px #aaa;
-  margin 0;
-  padding: 1rem 0;
-  border-radius: 0.2rem;
+.container {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+}
+
+.nav-list {
+  background: white;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin 0;
+  padding: 1rem 0;
+  border-radius: 0.2rem;
 }
 
 .nav-item {
@@ -19,33 +25,28 @@ body {
   margin-right: 2rem;
 }
 
-.nav-item a  {
+.nav-item:first-child {
+  margin-right: auto;
+  margin-left: 2rem;
+}
+
+.nav-item a {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
-  color: black;
+  color: #555;
   transition: all 200ms ease-in;
 }
 
 .nav-item a:hover {
-  color: #333;
+  color: black;
 }
 
-.btn-primary{
-  font-family: Helvetica;
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
-  font-size: 1rem;
-  background: lightblue;
-  border: none;
-  outline: none;
-  border-radius: 0.3rem;
-  padding: 0.5rem 0.75rem;
-  cursor: pointer;
-  transition: all 200ms ease-in;
+main a{
+  text-decoration: none;
+  color: black;
 }
 
-.btn-primary:hover{
+footer {
   background: blue;
-  color: white;
 }
