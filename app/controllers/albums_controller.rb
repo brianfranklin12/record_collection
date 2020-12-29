@@ -53,7 +53,9 @@ class AlbumsController < ApplicationController
 
     delete '/albums/:id/delete' do
       @album = Album.find(params[:id])
-      @album.delete
+      @user = User.find(session[:user_id])
+      @user_album = UserAlbum.find_by(:user_id => @user.id, :album_id => @album.id)
+      @user_album.destroy
       redirect '/albums'
     end
 

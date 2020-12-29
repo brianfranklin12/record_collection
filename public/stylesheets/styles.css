@@ -1,28 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&family=Roboto:wght@300;400&display=swap');
 
-* {
-  box-sizing: border-box;
-}
+
 body {
   font-family: Roboto, sans-serif;
-  background:#eef2f5;
+  font-weight: 400;
 }
 
 .container {
-  height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: 100%;
 }
 
 .nav-list {
-  background: #eef2f5;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin 0;
-  padding: 1rem 0;
-  border-radius: 0.2rem;
+  padding: 1rem;
 }
 
 .nav-item {
@@ -30,19 +23,12 @@ body {
   margin-right: 2rem;
 }
 
-.nav-item:first-child {
-  margin-right: auto;
-  margin-left: 2rem;
-}
-
 .nav-item a {
-  font-family: Roboto;
-  font-size: 1.5rem;
   text-decoration: none;
-  text-transform: uppercase;
+  color: #444;
+  font-size: 1.5rem;
   letter-spacing: 0.1rem;
-  color: #555;
-  transition: all 200ms ease-in;
+  transition: all 200ms ease;
 }
 
 .nav-item a:hover {
@@ -56,9 +42,6 @@ main a{
 
 main a:hover{
   text-decoration: underline;
-}
-
-footer {
 }
 
 button.btn-primary {
@@ -89,20 +72,32 @@ input[type=text], input[type=password] {
   border:0;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
   border-radius: 10px;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
+  width: 30%;
 }
 
 form {
-  display: inline-block;
-  justify-content: center;
+ display: block;
+ text-align: center;
+ padding: 10px;
 }
 
-.album-list {
+/* .album-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-}
+} */
 
 .album-item {
   list-style: none;
+}
+
+.album-item a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+
+.album-item a:hover {
+  text-decoration: underline;
 }

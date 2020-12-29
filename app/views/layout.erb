@@ -4,31 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RecordCollection</title>
-  <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+  <link rel="stylesheet" href="/stylesheets/styles.css">
 </head>
 <body>
   <div class="container">
-    <header>
+    <nav>
       <ul class="nav-list">
-        <li class="nav-item">
-          <a href="#"> 
-            <img id="logo" src="/images/logo.png" width=250px;>
-          </a>
-        </li>
         <% if !logged_in? %>
-          <li class="nav-item">
-            <a href="/login">Log In</a>
-          </li>
-          <li class="nav-item">
-            <a href="/signup">Sign Up</a>
-          </li>
+        <li class="nav-item"><a href="/login">Log In</a></li>
+        <li class="nav-item"><a href="/signup">Sign Up</a></li>
         <% else %>
-          <li class="nav-item">
-            <a href="/logout">Log Out</a>
-          </li>
+        <li class="nav-item"><a href="/logout">Log Out</a></li>
         <% end %>
       </ul>
-    </header>
+    </nav>
     <main>
       <%= yield %>
     </main>
@@ -36,6 +25,5 @@
       Copyright 2020 <strong>RecordCollection</strong>
     </footer>
   </div>
-  
 </body>
 </html>
