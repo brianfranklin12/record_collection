@@ -51,4 +51,10 @@ class AlbumsController < ApplicationController
       redirect "/albums/#{@album.id}"
     end
 
+    delete '/albums/:id/delete' do
+      @album = Album.find(params[:id])
+      @album.delete
+      redirect '/albums'
+    end
+
 end
