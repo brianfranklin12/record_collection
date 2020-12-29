@@ -84,16 +84,7 @@ h1 {
   font-size: 4rem;
 }
 
-input[type=text] {
-  padding:10px;
-  border:0;
-  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-  border-radius: 10px;
-  font-size: 1.25rem;
-  margin-bottom: 10px;
-}
-
-input[type=password] {
+input[type=text], input[type=password] {
   padding:10px;
   border:0;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
