@@ -1,7 +1,12 @@
 <h1><%=@album.name %></h1>
 <h2>by <%=@album.artist.name%></h2>
 <h3>year released: <%=@album.year_released%></h3>
-<h3>genre: <%=@album.genre%></h3><br><br>
+<h3>genre: <%=@album.genre%></h3>
+<% if @album.notes != "" %>
+  <h3>notes: <%=@album.notes%></h3>
+<% end %>
+
+<br><br>
 
 <button class="btn-primary" onclick="location.href='/albums/<%=@album.id%>/edit'">Edit Album</button>
 

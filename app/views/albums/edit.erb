@@ -1,4 +1,4 @@
-<form method="post" action="/albums/<%=@album.id%>">
+<form class="input-form" method="post" action="/albums/<%=@album.id%>">
   <input type="hidden" id="hidden" name="_method" value="patch">
   <input type="text" name="name" value="<%=@album.name%>" placeholder="Album Name"><br>
   <input type="text" name="artist" value="<%=@album.artist.name%>" placeholder="Artist Name"><br>
