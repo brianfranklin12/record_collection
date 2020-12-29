@@ -1,8 +1,8 @@
 <h1><%=current_user.username%>'s RecordCo//ection</h1>
 <div class="sidebar">
-<ul>
+<ul class="album-list">
   <% current_user.albums.each do |album| %>
-    <li><a href="/albums/<%=album.id%>"><%="#{album.name} - by #{album.artist.name}"%></a></li>
+    <li class="album-item"><a href="/albums/<%=album.id%>"><%="#{album.name} - by #{album.artist.name}"%></a></li>
   <% end %>
 </ul>
 </div>

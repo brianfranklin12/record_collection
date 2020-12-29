@@ -32,4 +32,23 @@ class AlbumsController < ApplicationController
       end
     end
 
+    get '/albums/:id/edit' do 
+      if logged_in?
+        @album = Album.find(params[:id])
+        erb :'/albums/edit'
+      else
+        redirect '/login'
+      end
+    end
+
+    patch '/albums/:id' do 
+      @album = Album.find(params[:id])
+      @album.artist = Artist.find_or_create_by(:name => params[:artist])
+      @album.genre = params[:genre]
+      @album.year_released = params[:year_released]
+      @album.notes = params[:notes]
+      @album.save
+      redirect "/albums/#{@album.id}"
+    end
+
 end

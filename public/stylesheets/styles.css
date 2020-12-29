@@ -5,7 +5,7 @@
 }
 body {
   font-family: Roboto, sans-serif;
-  background: white;
+  background:#eef2f5;
 }
 
 .container {
@@ -16,7 +16,7 @@ body {
 }
 
 .nav-list {
-  background: white;
+  background: #eef2f5;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -36,9 +36,11 @@ body {
 }
 
 .nav-item a {
+  font-family: Roboto;
+  font-size: 1.5rem;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.1rem;
   color: #555;
   transition: all 200ms ease-in;
 }
@@ -47,19 +49,20 @@ body {
   color: black;
 }
 
-main {
-}
-
 main a{
   text-decoration: none;
-  color: black;
+  color: #1781c2;
+}
+
+main a:hover{
+  text-decoration: underline;
 }
 
 footer {
 }
 
 button.btn-primary {
-  font-family: Jura;
+  font-family: Roboto, sans-serif;
   border: none;
   border-radius: 0.5rem;
   background: #1da1f2;
@@ -85,19 +88,30 @@ input[type=text] {
   padding:10px;
   border:0;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-  border-radius: 15px;
+  border-radius: 10px;
   font-size: 1.25rem;
+  margin-bottom: 10px;
 }
 
 input[type=password] {
   padding:10px;
   border:0;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-  border-radius: 15px;
+  border-radius: 10px;
   font-size: 1.25rem;
+  margin-bottom: 10px;
 }
 
 form {
   display: inline-block;
   justify-content: center;
+}
+
+.album-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.album-item {
+  list-style: none;
 }

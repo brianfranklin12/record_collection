@@ -1,0 +1,9 @@
+<form method="post" action="/albums/<%=@album.id%>">
+  <input type="hidden" id="hidden" name="_method" value="patch">
+  <input type="text" name="name" value="<%=@album.name%>" placeholder="Album Name"><br>
+  <input type="text" name="artist" value="<%=@album.artist.name%>" placeholder="Artist Name"><br>
+  <input type="text" name="year_released" value="<%=@album.year_released%>" placeholder="Year Released"><br>
+  <input type="text" name="genre" value="<%=@album.genre%>" placeholder="Genre"><br>
+  <input type="text" name="notes" value="<%=@album.notes%>" placeholder="Notes"><br><br>
+  <button class="btn-primary" type="submit" name="submit">Edit Album</button>
+</form>
