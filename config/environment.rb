@@ -4,7 +4,7 @@ require 'bundler/setup'
 Bundler.require(:default, ENV['SINATRA_ENV'])
 
 configure :development do
-  set :database, "sqlite3://database.db"
+  ActiveRecord::Base.establish_connection(ENV['SINATRA_ENV'].to_sym)
 end
 
 configure :production do
