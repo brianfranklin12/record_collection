@@ -2,7 +2,15 @@
 <div class="sidebar">
 <ul class="album-list">
   <% current_user.albums.each do |album| %>
-    <li class="album-item"><a href="/albums/<%=album.id%>"><%="#{album.name} - by #{album.artist.name}"%></a></li>
+    <li class="album-item">
+      <a href="/albums/<%=album.id%>">
+        <img class="album-item-img" src="<%=album.image_url%>" alt="<%=album.name%>">
+        <div class="text-block">
+          <h4><%=album.name%></h4>
+          <p>by <%=album.artist.name%></p>
+        </div>
+      </a>
+    </li>
   <% end %>
 </ul>
 </div>

@@ -11,13 +11,13 @@ class AlbumsController < ApplicationController
   post '/albums' do
     if logged_in?
       @album = Album.find_or_create_by(:name => params[:name])
+      @album.user = current_user 
       @album.artist = Artist.find_or_create_by(:name => params[:artist])
       @album.genre = params[:genre]
       @album.year_released = params[:year_released]
       @album.notes = params[:notes]
+      @album.image_url = @album.get_coverart
       @album.save
-      binding.pry
-      current_user.albums << @album
       redirect "/albums/#{@album.id}"
     else
       redirect "/login"
@@ -54,9 +54,7 @@ class AlbumsController < ApplicationController
 
     delete '/albums/:id/delete' do
       @album = Album.find(params[:id])
-      @user = User.find(session[:user_id])
-      @user_album = UserAlbum.find_by(:user_id => @user.id, :album_id => @album.id)
-      @user_album.destroy
+      @album.destroy
       redirect '/albums'
     end
 
