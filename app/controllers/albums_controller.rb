@@ -16,6 +16,7 @@ class AlbumsController < ApplicationController
       @album.year_released = params[:year_released]
       @album.notes = params[:notes]
       @album.save
+      binding.pry
       current_user.albums << @album
       redirect "/albums/#{@album.id}"
     else

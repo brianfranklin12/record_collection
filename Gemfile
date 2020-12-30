@@ -11,6 +11,8 @@ gem 'shotgun'
 gem 'pry'
 gem 'bcrypt'
 gem 'tux'
+gem 'musicbrainz', '~> 0.7.7'
+gem 'coverart'
 
 group :test do
   gem 'rspec'
