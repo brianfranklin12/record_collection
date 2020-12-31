@@ -5,22 +5,14 @@ gem 'activerecord', '~> 4.2', '>= 4.2.6', :require => 'active_record'
 gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
 gem 'rake'
 gem 'require_all'
+gem 'pry'
+gem 'sqlite3', '~> 1.3.6'
 gem 'thin'
 gem 'shotgun'
 gem 'bcrypt'
 gem 'tux'
 gem 'musicbrainz', '~> 0.7.7'
 gem 'coverart'
-
-group :production do
-  gem 'pg'
-  gem 'activerecord-postgresql-adapter'
-end
-
-group :development, :test do 
-  gem 'pry'
-  gem 'sqlite3', '~> 1.3.6'
-end
 
 group :test do
   gem 'rspec'

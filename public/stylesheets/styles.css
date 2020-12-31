@@ -5,7 +5,6 @@ html, body {
   font-family: Roboto, sans-serif;
   background: #f9f9f9;
   height: 100%;
-  margin: 0;
 }
 
 .container {
@@ -138,6 +137,11 @@ input[type=text], input[type=password] {
   visibility: hidden;
   transition: opacity 200ms ease;
   opacity: 0;
+}
+
+.text-block h4 {
+  font-size: 2rem;
+  font-family: Jura, sans-serif;
 }
 
 .album-item:hover .text-block {
