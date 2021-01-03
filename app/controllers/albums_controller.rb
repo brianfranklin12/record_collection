@@ -4,6 +4,10 @@ class AlbumsController < ApplicationController
     erb :'albums/index'
   end
 
+  get '/albums/list' do
+    erb :'albums/list'
+  end
+
   get '/albums/new' do 
     erb :'albums/new'
   end

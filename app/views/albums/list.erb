@@ -1,0 +1,10 @@
+<ul>
+  <% current_user.artists.each do |artist| %>
+    <li><h1 class="list-artist-name"><%=artist.name%></h1></li>
+      <ul>
+        <% artist.albums.each do |album| %>
+          <li><h3 class="list-album-name"><a href="/albums/<%=album.id%>"><%=album.name%></h3></a></li>
+        <% end %>
+      </ul>
+  <% end %>
+</ul>

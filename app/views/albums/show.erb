@@ -1,4 +1,6 @@
-<img width="500" height="500" class="album-art" src="<%=@album.image_url%>">
+<% if @album.image_url %>
+  <img width="500" height="500" class="album-art" src="<%=@album.image_url%>">
+<% end %>
 <h1><%=@album.name %></h1>
 <h2>by <%=@album.artist.name%></h2>
 <h3>year released: <%=@album.year_released%></h3>

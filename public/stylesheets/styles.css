@@ -28,6 +28,7 @@ body {
 
 footer {
   font-size: 1.3rem;
+  padding-top: 20px;
 }
 
 .nav-list {
@@ -124,7 +125,19 @@ input[type=text], input[type=password] {
 }
 
 .album-item {
+  list-style: none;
   position: relative;
+}
+
+.album-item-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.album-item:hover .text-block {
+  visibility: visible;
+  opacity: 0.7;
 }
 
 .text-block {
@@ -149,23 +162,12 @@ input[type=text], input[type=password] {
   font-family: Jura, sans-serif;
 }
 
-.album-item:hover .text-block {
-  visibility: visible;
-  opacity: 0.7;
-}
-
-.album-item-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.album-list {
-  list-style: none;
-}
-
 .album-art {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.list-artist-name {
+  text-align: left;
 }
