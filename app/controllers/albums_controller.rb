@@ -28,10 +28,14 @@ class AlbumsController < ApplicationController
     end
   end
 
-    get '/albums/:id' do 
+    get '/albums/:id' do
       if logged_in?
         @album = Album.find(params[:id])
-        erb :'/albums/show'
+        if current_user.id == @album.user_id
+          erb :'/albums/show'
+        else
+          redirect '/albums'
+        end
       else
         redirect '/login'
       end
@@ -40,7 +44,11 @@ class AlbumsController < ApplicationController
     get '/albums/:id/edit' do 
       if logged_in?
         @album = Album.find(params[:id])
-        erb :'/albums/edit'
+        if current_user.id == @album.user_id
+          erb :'/albums/edit'
+        else
+          redirect '/albums'
+        end
       else
         redirect '/login'
       end

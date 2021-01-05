@@ -56,12 +56,12 @@ footer {
   color: black;
 }
 
-main a{
+.blue-links {
   text-decoration: none;
   color: #1781c2;
 }
 
-main a:hover{
+.blue-links:hover{
   text-decoration: underline;
 }
 
@@ -168,6 +168,31 @@ input[type=text], input[type=password] {
   margin-right: auto;
 }
 
+.list-artist {
+  list-style: none;
+}
 .list-artist-name {
   text-align: left;
+  font-family: Jura;
+}
+
+.list-albums {
+  list-style: none;
+}
+
+.list-album-name {
+  text-align: left;
+  list-style: none;
+}
+
+.list-album-name a {
+  text-decoration: none;
+  color: #444;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  transition: all 200ms ease;
+}
+
+.list-album-name a:hover {
+  color: black;
 }
