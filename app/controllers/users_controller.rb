@@ -14,7 +14,12 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect '/albums'
     else
-      redirect '/signup' 
+      if params[:username] == ""
+        session[:error] = "Username cannot be blank"
+      else
+        session[:error] = "Password cannot be blank"
+      end
+      redirect '/signup'
     end
   end
 
@@ -32,6 +37,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect '/albums'
     else
+      session[:error] = "Username and password combo not found"
       redirect '/login'
     end
   end
