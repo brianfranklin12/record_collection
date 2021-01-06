@@ -10,14 +10,20 @@ class UsersController < ApplicationController
 
   post '/signup' do 
     if (params[:username] != "") && (params[:password] != "")
-      user = User.create(params)
-      session[:user_id] = user.id
-      redirect '/albums'
+      user = User.find_by(:username => params[:username])
+      if user
+        flash[:message] = "User already exists"
+        redirect '/login'
+      else
+        user = User.create(params)
+        session[:user_id] = user.id
+        redirect '/albums'
+      end
     else
       if params[:username] == ""
-        session[:error] = "Username cannot be blank"
+        flash[:message] = "Username cannot be blank"
       else
-        session[:error] = "Password cannot be blank"
+        flash[:message] = "Password cannot be blank"
       end
       redirect '/signup'
     end
@@ -37,7 +43,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect '/albums'
     else
-      session[:error] = "Username and password combo not found"
+      flash[:message] = "Account not found"
       redirect '/login'
     end
   end

@@ -22,6 +22,11 @@
       </ul>
     </nav>
     <main>
+      <% flash.keys.each do |type| %>
+        <div data-alert class="flash-<%= type %>">
+          <%= flash[type] %>
+        </div>
+      <% end %>
       <%= yield %>
     </main>
     <footer>

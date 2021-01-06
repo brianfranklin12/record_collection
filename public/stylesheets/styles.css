@@ -196,3 +196,10 @@ input[type=text], input[type=password] {
 .list-album-name a:hover {
   color: black;
 }
+
+.flash-message {
+  background: #ff0f0f;
+  color: white;
+  padding: 15px;
+  border-radius: .5rem;
+}

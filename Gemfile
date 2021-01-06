@@ -13,6 +13,7 @@ gem 'bcrypt'
 gem 'tux'
 gem 'musicbrainz', '~> 0.7.7'
 gem 'coverart'
+gem 'sinatra-flash', :require => 'sinatra/flash'
 
 group :test do
   gem 'rspec'
