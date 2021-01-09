@@ -30,7 +30,7 @@ class AlbumsController < ApplicationController
 
     get '/albums/:id' do
       if logged_in?
-        @album = Album.find(params[:id])
+        @album = Album.find_by(:id => params[:id])
         if current_user.id == @album.user_id
           erb :'/albums/show'
         else
@@ -43,7 +43,7 @@ class AlbumsController < ApplicationController
 
     get '/albums/:id/edit' do 
       if logged_in?
-        @album = Album.find(params[:id])
+        @album = Album.find_by(:id => params[:id])
         if current_user.id == @album.user_id
           erb :'/albums/edit'
         else
@@ -54,20 +54,32 @@ class AlbumsController < ApplicationController
       end
     end
 
-    patch '/albums/:id' do 
-      @album = Album.find(params[:id])
-      @album.artist = Artist.find_or_create_by(:name => params[:artist])
-      @album.genre = params[:genre]
-      @album.year_released = params[:year_released]
-      @album.notes = params[:notes]
-      @album.save
-      redirect "/albums/#{@album.id}"
+    patch '/albums/:id' do
+      if logged_in?
+        @album = Album.find_by(:id => params[:id])
+        @album.artist = Artist.find_or_create_by(:name => params[:artist])
+        @album.genre = params[:genre]
+        @album.year_released = params[:year_released]
+        @album.notes = params[:notes]
+        @album.save
+        redirect "/albums/#{@album.id}"
+      else
+        redirect '/login'
+      end
     end
 
     delete '/albums/:id/delete' do
-      @album = Album.find(params[:id])
-      @album.destroy
-      redirect '/albums'
+      if logged_in?
+        @album = Album.find_by(:id => params[:id])
+        if @album.user == current_user
+          @album.destroy
+          redirect '/albums'
+        else
+          redirect '/albums'
+        end
+      else
+        redirect '/login'
+      end
     end
 
 end
