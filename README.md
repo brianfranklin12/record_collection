@@ -10,6 +10,6 @@ RecordCo//ection is an MVC app built using Sinatra framework to allow a user to 
 - Enter album info and submit, the app should automatically pull up album art for the album
 - Continue adding, and editing until all your collection is displayed in a beautiful grid.
 ## Contributing
-- Email me at brianfranklinmusic@gmail.com to discuss any chnage you wish to make before making a change. THank You!
+- Email me at brianfranklinmusic@gmail.com to discuss any chnage you wish to make before making a change. Thank You!
 ## License
 [MIT License](LICENSE.md)
