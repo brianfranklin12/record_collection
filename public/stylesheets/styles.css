@@ -3,10 +3,9 @@
 
 html, body {
   font-family: Roboto, sans-serif;
-  background-image: linear-gradient(to bottom right, ##cac1bf, white);
-  background-attachment: fixed;
   margin: 0;
   padding: 0;
+  background: #f7f7f7;
 }
 
 body {
