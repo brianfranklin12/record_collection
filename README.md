@@ -3,8 +3,9 @@ RecordCo//ection is an MVC app built using Sinatra framework to allow a user to 
 ## Installation
 1. Fork and clone this repository onto your machine. 
 2. Type 'bundle install' in your terminal while in the root folder for this project
-3. Type 'shotgun' to start up your local server.
-4. Open your web browser to localhost:9393 to display the webapp.
+3. Type 'rake db:migrate' to run your migrations to your database.
+4. Type 'shotgun' to start up your local server.
+5. Open your web browser to localhost:9393 to display the webapp.
 ## Usage
 - After signing up / logging in, you can start adding albums by clicking the "Add Album to Collection" button or hitting "Add Album" in the nav bar.
 - Enter album info and submit, the app should automatically pull up album art for the album
