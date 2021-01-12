@@ -11,7 +11,7 @@ Specs:
 - [x] Ensure that users can't modify content created by other users - i user helper methods logged_in? and current_user to authenticate user and only allow editing if they should be able to
 - [x] Include user input validations - use the bcrypt gem and password_digest along with the .authenticate menthod to validate user
 - [x] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new) - use flash messages to display errors
-- [ ] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+- [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code - in progress
 
 Confirm
 - [x] You have a large number of small Git commits
