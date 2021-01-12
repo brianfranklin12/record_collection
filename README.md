@@ -12,4 +12,4 @@ RecordCo//ection is an MVC app built using Sinatra framework to allow a user to 
 ## Support
 - email me at brianfranklinmusic@gmail.com with any issues.
 ## License
-[a relative link]{LICENSE.md}
+[a relative link](LICENSE.md)
