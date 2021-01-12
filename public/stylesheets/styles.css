@@ -4,6 +4,7 @@
 html, body {
   font-family: Roboto, sans-serif;
   background-image: linear-gradient(to bottom right, #cebfbb, white);
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
 }
@@ -203,11 +204,10 @@ input[type=text], input[type=password] {
 }
 
 .flash-message {
-  background: #EFB593;
+  background: #ddcae6;
   color: #333;
   padding: 15px;
   border-radius: .75rem;
-}
 
 #logo {
   width: 65%;
