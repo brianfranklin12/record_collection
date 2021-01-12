@@ -11,9 +11,11 @@
     <nav>
       <ul class="nav-list">
         <% if !logged_in? %>
+        <li class="nav-item"><img id="logo" src="/images/logo.png" /></li>
         <li class="nav-item"><a href="/login">Log In</a></li>
         <li class="nav-item"><a href="/signup">Sign Up</a></li>
         <% else %>
+        <li class="nav-item"><img id="logo" src="/images/logo.png" /></li>
         <li class="nav-item"><a href="/albums">View Album Gallery</a></li>
         <li class="nav-item"><a href="/albums/list">View Album List</a></li>
         <li class="nav-item"><a href="/albums/new">Add Album</a></li>

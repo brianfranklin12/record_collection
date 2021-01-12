@@ -44,6 +44,11 @@ footer {
   margin-right: 2rem;
 }
 
+.nav-item:first-child {
+  margin-right: auto;
+  margin-left: 2rem;
+}
+
 .nav-item a {
   text-decoration: none;
   color: #444;
@@ -202,4 +207,9 @@ input[type=text], input[type=password] {
   color: white;
   padding: 15px;
   border-radius: .75rem;
+}
+
+#logo {
+  width: 50%;
+  height: 50%;
 }

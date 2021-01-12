@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
 
   get "/" do
     if !logged_in?
-      erb :index
+      erb :'users/login'
     else
       redirect '/albums'
     end
