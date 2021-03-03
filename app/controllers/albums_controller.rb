@@ -1,15 +1,28 @@
 class AlbumsController < ApplicationController
 
-  get '/albums' do 
-    erb :'albums/index'
+  get '/albums' do
+    if logged_in?
+      erb :'albums/index'
+    else
+      redirect "/login"
+    end
   end
+
 
   get '/albums/list' do
-    erb :'albums/list'
+    if logged_in?
+      erb :'albums/list'
+    else
+      redirect "/login"
+    end
   end
 
-  get '/albums/new' do 
-    erb :'albums/new'
+  get '/albums/new' do
+    if logged_in?
+      erb :'albums/new'
+    else
+      redirect "/login"
+    end
   end
 
   post '/albums' do
